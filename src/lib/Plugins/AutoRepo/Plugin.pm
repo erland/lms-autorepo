@@ -89,7 +89,7 @@ sub getRepositories {
 
 sub refreshRepositories {
         my $http = LWP::UserAgent->new;
-        my $response = $http->get("http://erlandplugins.googlecode.com/svn/repository/trunk/autorepo.xml");
+        my $response = $http->get("http://erland.github.io/lms-autorepo/autorepo.xml");
 	$g_repositories = {};
         if($response->is_success) {
                 my $repositoriesContent = $response->content;
